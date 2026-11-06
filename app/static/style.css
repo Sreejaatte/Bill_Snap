@@ -1,0 +1,232 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+    line-height: 1.5;
+}
+
+.container {
+    width: 92%;
+    max-width: 800px;
+    margin: 35px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 38px;
+    color: #5146d8;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+input[type="file"] {
+    background: #fafafa;
+    margin-bottom: 15px;
+}
+
+.file-details {
+    background: #f5f6fa;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 7px;
+    overflow-wrap: anywhere;
+}
+
+.file-details p {
+    margin: 5px 0;
+}
+
+button {
+    border: none;
+    background: #5146d8;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4035bd;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 20px;
+    color: #5146d8;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 4px solid #ddd;
+    border-top-color: #5146d8;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.error {
+    background: #ffe8e8;
+    color: #b42318;
+    padding: 12px;
+    border-radius: 7px;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+.edit-field {
+    margin-bottom: 16px;
+}
+
+.edit-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.edit-field input {
+    background: #fff;
+}
+
+.edit-field input:focus {
+    outline: 2px solid #5146d8;
+}
+
+.hint {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.item-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.item-card h3 {
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.bill-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.bill-card h3 {
+    margin-bottom: 8px;
+    color: #5146d8;
+}
+
+.bill-card p {
+    margin: 5px 0;
+}
+
+.delete-button {
+    background: #c62828;
+    margin-top: 10px;
+}
+
+.delete-button:hover {
+    background: #a61b1b;
+}
+
+#saveMessage {
+    margin-top: 15px;
+    color: #267342;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

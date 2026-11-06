@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bill Snap | AI Bill Scanner</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <header class="header">
+        <h1>Bill Snap</h1>
+        <p>Scan, review, correct, and save your bills using AI.</p>
+    </header>
+
+    <section class="card">
+
+        <h2>Upload Your Bill</h2>
+
+        <form id="uploadForm">
+
+            <input
+                type="file"
+                id="file"
+                name="file"
+                accept="image/*"
+                required
+            >
+
+            <div id="fileDetails" class="file-details">
+                No file selected.
+            </div>
+
+            <button type="submit" id="scanButton">
+                Scan Bill
+            </button>
+
+        </form>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Scanning your bill with AI...</p>
+        </div>
+
+        <div id="errorMessage" class="error hidden"></div>
+
+    </section>
+
+    <!-- Editable bill -->
+    <section id="result" class="card hidden">
+
+        <h2>Review and Correct Bill</h2>
+
+        <p class="hint">
+            Check the extracted information and correct anything inaccurate.
+        </p>
+
+        <form id="editForm">
+
+            <div id="resultContent"></div>
+
+            <button type="submit" id="saveButton">
+                Save Corrected Bill
+            </button>
+
+        </form>
+
+        <div id="saveMessage"></div>
+
+    </section>
+
+    <!-- Saved bills -->
+    <section class="card">
+
+        <div class="section-heading">
+            <h2>Saved Bills</h2>
+
+            <button type="button" id="refreshBills">
+                Refresh
+            </button>
+        </div>
+
+        <div id="savedBills">
+            <p>No saved bills loaded yet.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Bill Snap — AI-powered receipt scanner</p>
+    </footer>
+
+</main>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
